@@ -1,0 +1,26 @@
+#Feature Overview：
+Name Highlighting: Highlights names, nicknames, and similar terms in dialogue in yellow text.
+Progress Visualization: Adds an "○" symbol to each sentence and a "●" symbol to the colonist's final sentence in each conversation round, visually indicating whether the current round of dialogue is complete.
+Free Customization: All features can be freely enabled/disabled and adjusted in the mod settings interface (special functions, such as name highlighting prompts, can be skipped in alternating rounds to save tokens).
+
+#How It Works：
+Name Highlighting: The AI is instructed via prompts to mark specific terms, and the code processes these marked texts to achieve highlighting.
+Dialogue Detection: The mod monitors RimTalk's debug interface, automatically detects colonist names and the structure of dialogue segments, and inserts "○" or "●" symbols accordingly.
+
+#Notes：
+The name highlighting feature relies entirely on the AI to function, consumes a small additional amount of tokens, and may fail or produce garbled text in extreme cases.
+Key Insight (For AI Developers)
+It is unnecessary to send complete prompts every dialogue round. Some instructions can be sent every 2–3 rounds, as the AI retains memory of them. This approach saves tokens and optimizes AI attention allocation.
+
+#Additional Notes：
+This mod is still in the testing phase and was developed with AI assistance.
+Initially designed for personal use but shared publicly in case it helps others.
+As the developer has limited experience, the mod may feel rough around the edges—apologies for any imperfections.
+
+#Feedback and Discussion：
+If compatibility issues or other problems arise, please report them immediately. I will do my best to resolve them. Discussions and feedback are welcome!（###please tell me at steam workshop） 
+
+#update log：
+(Dec 28）
+Optimized code and added a forced synchronization feature for speech bubbles with conversation history, ensuring accurate tagging without misjudgment.
+Tags can now be freely placed at the beginning or end of sentences, or only marked on the final sentence of the current conversation round.
